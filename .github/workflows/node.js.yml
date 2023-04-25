@@ -44,5 +44,4 @@ jobs:
             pm2 serve build/ 3000 -f --name "react-build" --spa
             sudo rm -rf /etc/nginx/sites-available/default
             sudo cp default /etc/nginx/sites-available/ -r
-            sudo systemctl kill nginx || true
-            sudo systemctl start nginx
+            sudo systemctl restart nginx
